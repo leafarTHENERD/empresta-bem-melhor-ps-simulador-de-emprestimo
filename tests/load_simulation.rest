@@ -1,0 +1,6 @@
+POST http://localhost:8000/api/loan_simulation
+Content-Type: application/json
+
+{
+    "valor_emprestimo": 10000
+}

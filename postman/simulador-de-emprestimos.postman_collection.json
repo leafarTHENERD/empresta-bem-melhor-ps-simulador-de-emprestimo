@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "42bc670f-3ba5-4d7d-9ead-52ea48838b92",
+		"name": "simulador-de-emprestimos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Instituições Disponíveis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/instituicoes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"instituicoes"
+					]
+				},
+				"description": "GET /api/instituicoes"
+			},
+			"response": []
+		},
+		{
+			"name": "Convênios Disponiveis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/convenios",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"convenios"
+					]
+				},
+				"description": "Obter lista de convênios disponíveis."
+			},
+			"response": []
+		},
+		{
+			"name": "Simulação de Emprestimo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"valor_emprestimo\": 10000.00,\n    \"instituicoes\": [\"PAN\", \"OLE\", \"BMG\"],\n    \"convenios\": [\"INSS\", \"FEDERAL\", \"SIAPE\"],\n    \"parcela\": 48\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/simulacao_de_emprestimo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"simulacao_de_emprestimo"
+					]
+				},
+				"description": "Simulação de Emprestimo"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
